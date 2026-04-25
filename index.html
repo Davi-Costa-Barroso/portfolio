@@ -1,263 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" class="scroll-smooth">
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Davi Barroso</title>
+    <title>Davi Barroso | Software Engineer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="./images/foto.jpeg" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(39, 39, 42, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .blob { filter: blur(60px); position: absolute; z-index: -1; border-radius: 50%; opacity: 0.2; }
+    </style>
 </head>
 
-<body class="bg-zinc-900 ">
-    <header class="fixed top-0 left-0 w-full bg-zinc-800 text-white z-40 shadow-md shadow-blue-900 ">
-        <div class="flex items-center justify-between md:justify-around h-[40px] p-2">
-            <h1 class="font-bold text-xl transition-transform duration-200 ease-in-out hover:scale-105" title="Prazer, Davi">Davi Costa Barroso</h1>
-            <nav class="hidden md:block lg:block">
-                <ol class="flex space-x-8">
-                    <li><a href="#inicio" class="hover:text-gray-300">Inicio</a></li>
-                    <li><a href="#sobre" class="hover:text-gray-300 scroll-smooth">Sobre</a></li>
-                    <li><a href="#formacao" class="hover:text-gray-300">Formação</a></li>
-                    <li><a href="#experiencia" class="hover:text-gray-300">Experiência</a></li>
-                </ol>
+<body class="bg-[#09090b] text-zinc-200 overflow-x-hidden">
+    <div class="blob w-96 h-96 bg-blue-600 top-[-10%] left-[-10%]"></div>
+    <div class="blob w-80 h-80 bg-purple-600 bottom-[10%] right-[-5%]"></div>
+
+    <header class="fixed top-0 left-0 w-full glass z-50 border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto flex items-center justify-between h-16 px-6">
+            <h1 class="font-bold text-xl tracking-tighter bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent transition-transform hover:scale-105 cursor-default">
+                DAVI COSTA BARROSO
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8 text-sm font-medium">
+                    <li><a href="#inicio" class="hover:text-blue-500 transition-colors">Início</a></li>
+                    <li><a href="#sobre" class="hover:text-blue-500 transition-colors">Sobre</a></li>
+                    <li><a href="#formacao" class="hover:text-blue-500 transition-colors">Formação</a></li>
+                    <li><a href="#experiencia" class="hover:text-blue-500 transition-colors">Experiência</a></li>
+                </ul>
             </nav>
+            <div class="md:hidden text-2xl"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <main class="flex flex-col w-full text-white text-gray-200 gap-y-5 md:gap-y-0 lg:gap-y-0">
-        <section
-            class="grid grid-cols-1 pt-16 md:pt-0 lg:pt-0 md:grid-cols-2 lg:grid-cols-2 z-10 w-full md:min-h-screen gap-x-4"
-            id="inicio">
-            <div class="flex justify-center items-center">
-                <img src="./images/foto.jpeg" class="rounded-full w-2/3 transition-transform duration-500 ease-in-out hover:scale-110 cursor-pointer ">
+
+    <main class="max-w-6xl mx-auto px-6">
+        <section id="inicio" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 pt-20">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <img src="./images/foto.jpeg" class="relative rounded-full w-80 h-80 object-cover border-2 border-zinc-800 shadow-4xl">
             </div>
-            <div class="flex flex-col justify-center text-left gap-4 text-center md:text-left lg:text-left">
+            
+            <div class="flex flex-col gap-6 text-center md:text-left max-w-xl">
                 <div>
-                    <h1 class="text-3xl">Olá, eu sou o</h1>
-                    <h1 class="text-5xl text-blue-600">Davi Barroso</h1>
+                    <span class="text-blue-500 font-mono tracking-widest uppercase">Programador</span>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white">Davi <span class="text-blue-600">Barroso</span></h1>
                 </div>
-                <h2 class="leading-4 text-lg">Desenvolvedor de software, Engenheiro de Computação.</h2>
-                <div class="flex gap-4 items-center justify-center md:justify-start">
-                    <a href="https://www.linkedin.com/in/davi-barroso-a9a46621b/" target="_blank"
-                        class="text-[38px] transition-transform duration-200 ease-in-out hover:scale-125">
-                        <i class="fab fa-linkedin-in"></i>
+                <p class="text-lg text-gray-200 leading-relaxed italic">
+                    Desenvolvedor de Software & Engenheiro de Computação. Transformando café em sistemas escaláveis.
+                </p>
+                <div class="flex gap-5 justify-center md:justify-start">
+                    <a href="https://www.linkedin.com/in/davi-barroso-a9a46621b/" target="_blank" class="text-5xl transition-all hover:-translate-y-1">
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Davi-Costa-Barroso" target="_blank" class="text-[38px] transition-transform duration-200 ease-in-out hover:scale-125">
+                    <a href="https://github.com/Davi-Costa-Barroso" target="_blank" class="text-5xl transition-all hover:-translate-y-1">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 w-full md:min-h-screen items-center max-w-4xl mx-auto relative p-2" id="sobre">
-            <img src="./images/code.svg" class="hidden md:hidden lg:block absolute top-5 -left-52 opacity-10 w-40 h-40 z-4">
-            <img src="./images/code2.svg" class="hidden md:hidden lg:block absolute bottom-0 -right-52 opacity-10 w-40 h-40 z-4">
-
-            <div class="flex flex-col mx-auto max-w-4xl gap-4 z-10">
-                <h1 class="text-4xl text-center">
-                    Sobre mim
-                </h1>
-                <h4 class="text-center text-xl text-gray-200 ">
-                    Programador FullStack com experiência em React.js, Vue.js, JavaScript, TypeScript, Node.js, Python, Express,
-                    MongoDB, PostgreSQL, Git e Github. Engenheiro de Computação (UFPA), Técnico em Manutenção e Suporte em informática (IFPA). Mestrando em Computação Aplicada com ênfase em Engenharia de Software (UFPA).
-                </h4>
-
-                <div class="grid grid-cols-5 mx-auto gap-4">
-                    <img src="https://skillicons.dev/icons?i=js"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="JavaScript">
-                    <img src="https://skillicons.dev/icons?i=ts"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="TypeScript">
-                    <img src="https://skillicons.dev/icons?i=html"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="HTML">
-                    <img src="https://skillicons.dev/icons?i=css"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="CSS">
-                    <img src="https://skillicons.dev/icons?i=vue"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="Vue.js">
-                    <img src="https://skillicons.dev/icons?i=react"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="React">
-
-                    <img src="https://skillicons.dev/icons?i=nodejs"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="Node.js">
-                    <img src="https://skillicons.dev/icons?i=mongodb"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="MongoDB">
-                    <img src="https://skillicons.dev/icons?i=java"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer  rounded-2xl shadow-md shadow-blue-900"
-                        alt="Java">
-                    <img src="https://skillicons.dev/icons?i=py"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="Python">
-                    <!-- <img src="https://skillicons.dev/icons?i=c"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="C"> -->
-                    <!-- <img src="https://skillicons.dev/icons?i=arduino"
-                        class="h-[60px] hover:scale-125 transition-transform duration-200 ease-in-out cursor-pointer rounded-2xl shadow-md shadow-blue-900"
-                        alt="Arduino"> -->
-                </div>
+        <section id="sobre" class="py-24 space-y-12">
+            <div class="text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-white">Sobre mim</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto mt-4 rounded-full"></div>
             </div>
-        </section>
 
-        <section class="grid grid-cols-1 w-full md:min-h-screen items-center max-w-4xl mx-auto relative p-2" id="formacao">
-            <img src="./images/code.svg" class="hidden md:hidden lg:block absolute top-5 -left-52 opacity-10 w-40 h-40 z-4">
-            <img src="./images/code2.svg" class="hidden md:hidden lg:block absolute bottom-0 -right-52 opacity-10 w-40 h-40 z-4">
-
-            <div class="flex flex-col mx-auto gap-y-8 ">
-                <h1 class="text-4xl text-center ">
-                    Formação Acadêmica
-                </h1>
-                <div class="grid grid-cols-1 text-gray-200 gap-4">
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-4">
-                            <div>
-                                <h3 class="text-sm">Universidade Federal do Pará (UFPA)</h3>
-                                <h2 class="text-lg font-semibold">
-                                    Mestrado em Computação Aplicada
-                                </h2>
-                                <p class="text-gray-500">Março, 2025 - Atualmente</p>
-                            </div>
-
-                            <p class="text-justify">
-                                Ênfase em Engenharia de Software, linha de pesquisa em desenvolvimento de sistemas.
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-4">
-                            <div>
-                                <h3 class="text-sm">Universidade Federal do Pará (UFPA)</h3>
-                                <h2 class="text-lg font-semibold">
-                                    Bacharel em Engenharia de Computação
-                                </h2>
-                                <p class="text-gray-500">Agosto, 2020 - Novembro, 2024</p>
-                            </div>
-
-                            <p class="text-justify">
-                                Formado com honraria <i>Summa Cum Laude</i>, média geral de 9,9.
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-4 ">
-                            <div>
-                                <h3 class="text-sm">Instituto Federal do Pará (IFPA)</h3>
-                                <h2 class="text-lg font-semibold">
-                                    Técnico em Manutenção e Suporte em informática
-                                </h2>
-                                <p class="text-gray-500">2016 - 2019</p>
-                            </div>
-                            <p class="text-justify">
-                                Projeto Integrador: aplicativo organizador de jogos estudantis (OJE), criado para
-                                auxiliar na organização dos jogos estudantis do IFPA e preservar o meio ambiente
-                                economizando os materias de anotações dos jogos.
-                            </p>
-                        </div>
+            <div class="glass p-8 rounded-3xl max-w-4xl mx-auto">
+                <p class="text-lg text-zinc-300 text-center leading-relaxed mb-10">
+                    Programador FullStack com forte base em engenharia. Atualmente Mestrando em Computação Aplicada (UFPA).
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="group relative">
+                        <img src="https://skillicons.dev/icons?i=js,ts,html,css,vue,react,nodejs,mongodb,py" class="h-12 md:h-14" alt="Tech Stack">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 w-full md:min-h-screen items-center max-w-4xl mx-auto relative p-2"
-            id="experiencia">
-            <img src="./images/code.svg" class="hidden md:hidden lg:block absolute top-5 -left-52 opacity-10 w-40 h-40 z-4">
-            <img src="./images/code2.svg" class="hidden md:hidden lg:block absolute bottom-0 -right-52 opacity-10 w-40 h-40 z-4">
+        <section id="formacao" class="py-24">
+            <h2 class="text-2xl md:text-4xl font-bold text-white text-center mb-16">Jornada Acadêmica</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-4 rounded-2xl border-l-4 border-blue-600 hover:bg-zinc-800/50 transition-all">
+                    <span class="text-sm font-mono text-blue-500">2025 — Em andamento</span>
+                    <h3 class="text-lg font-bold mt-2">Mestrado em Computação Aplicada</h3>
+                    <p class="text-sm text-zinc-400 mb-4">Universidade Federal do Pará (UFPA)</p>
+                    <p class="text-sm leading-relaxed italic">Ênfase em Engenharia de Software e desenvolvimento de sistemas complexos.</p>
+                </div>
 
-            <div class="flex flex-col w-full gap-y-8">
-                <h1 class="text-4xl text-center ">
-                    Experiência
-                </h1>
-                <div class="grid grid-cols-1 text-gray-200 gap-4 ">
+                <div class="glass p-4 rounded-2xl border-l-4 border-yellow-500 hover:bg-zinc-800/50 transition-all">
+                    <span class="text-sm font-mono text-yellow-500">2020 — 2024</span>
+                    <h3 class="text-lg font-bold mt-2">Engenharia de Computação</h3>
+                    <p class="text-sm text-zinc-400 mb-4">Universidade Federal do Pará (UFPA)</p>
+                    <p class="text-sm leading-relaxed italic font-semibold text-zinc-200 underline decoration-yellow-500/50">Honraria Summa Cum Laude (Média 9,9).</p>
+                </div>
 
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-2">
+                <div class="glass p-4 rounded-2xl border-l-4 border-green-500 hover:bg-zinc-800/50 transition-all">
+                    <span class="text-sm font-mono text-green-500">2016 — 2019</span>
+                    <h3 class="text-lg font-bold mt-2">Técnico em Informática</h3>
+                    <p class="text-sm text-zinc-400 mb-4">Instituto Federal do Pará (IFPA)</p>
+                    <p class="text-sm leading-relaxed italic text-zinc-400">Desenvolvimento do projeto OJE para gestão de eventos esportivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-24 pb-40">
+            <h2 class="text-2xl md:text-4xl font-bold text-white text-center mb-16 uppercase tracking-tighter">Experiência Profissional</h2>
+            <div class="space-y-10 max-w-4xl mx-auto">
+
+                <div class="relative pl-8 border-l-4 border-blue-600 group">
+                    <div class="absolute w-5 h-5 bg-blue-600 rounded-full -left-[12px] top-1 group-hover:scale-125 transition-transform shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+                    <div class="glass p-8 rounded-2xl transition-all hover:bg-zinc-800/40">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
                             <div>
-                                <h1 class="">Kod Imperi</h1>
-                                <div class="my-1">
-                                    <h2 class="text-lg font-semibold">
-                                        Programador FullStack Pleno
-                                    </h2>
-                                    <p class="text-gray-500">Fev, 2025 - Atualmente</p>
+                                <h3 class="text-lg font-black text-white uppercase tracking-wider">Fácil LGPD</h3>
+                                <p class="text-blue-500 font-bold">Programador FullStack Pleno</p>
+                            </div>
+                            <span class="font-mono text-sm mt-2 md:mt-0 bg-zinc-900 px-3 py-1 rounded-full h-fit">Fev, 2026 — Atualmente</span>
+                        </div>
+                        <p class="leading-relaxed text-justify">
+                            Responsável pela manutenção contínua da plataforma e implementação de novas funcionalidades. Atuo na gestão técnica do time, gerenciando tarefas, orientando programadores juniores e realizando o deploy (subida de ajustes) nos servidores de produção.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-4 border-zinc-700 group">
+                    <div class="absolute w-5 h-5 bg-zinc-700 rounded-full -left-[12px] top-1 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass p-8 rounded-2xl transition-all hover:bg-zinc-800/40 border border-zinc-800">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-black text-white uppercase tracking-wider">Kod Imperi</h3>
+                                <div class="space-y-1 mt-1">
+                                    <p class="text-zinc-400">Programador FullStack Pleno <span class="text-zinc-500 font-normal text-sm">(Fev 2025 — Fev 2026)</span></p>
+                                    <p class="text-zinc-400">Programador FullStack Junior <span class="text-zinc-500 font-normal text-sm">(Out 2024 — Jan 2025)</span></p>
                                 </div>
                             </div>
-                            <p class="text-justify">
-                                Especialista em soluções com automação inteligente, desenvolvimento sob medida, além de testes e validações que garantem qualidade e eficiência.
-                            </p>
+                            <span class="font-mono text-sm mt-2 md:mt-0 uppercase tracking-tighter">1 ano e 4 meses</span>
                         </div>
-                    </div>
-
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-2 ">
-                            <div>
-                                <h1 class="">Robotax</h1>
-                                <div class="my-1">
-                                    <h2 class="text-lg font-semibold">
-                                        Programador FullStack Junior (Freelancer)
-                                    </h2>
-                                    <p class="text-gray-500">Jul, 2024 - Fev, 2025 · 7 meses</p>
-                                </div>
-
-                                <div class="my-1">
-                                    <h2 class="text-lg font-semibold">
-                                        Programador FullStack (Estágio)
-                                    </h2>
-                                    <p class="text-gray-500">Jan, 2024 - Jul, 2024 · 6 meses</p>
-                                </div>
-
-                            </div>
-                            <p class="text-justify">
-                                Atuei no desenvolvimento de novas funcionalidades e na implementação de melhorias no sistema. 
-                                Também prestei suporte aos estagiários quando necessário e realizei a manutenção da inteligência artificial responsável por previsões de tributações. Tecnologias utilizadas: React.js, TypeScript, Node.js, NestJS, PostgreSQL e MongoDB.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-2 ">
-                            <div>
-                                <h1 class="">Ashita Software</h1>
-                                <h2 class="text-lg font-semibold">
-                                    Programador fullstack Junior (Freelancer)
-                                </h2>
-                                <p class="text-gray-500">mar de 2024 - set de 2024 · 6 meses</p>
-                            </div>
-                            <p class="text-justify">
-                                Freelancer como programador, especializado em Vuejs, Javascript, Nodejs, Express e mongoDB.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col border border-gray-500 rounded-md bg-zinc-800 p-2">
-                        <div class="space-y-2 ">
-                            <div>
-                                <h1 class="">Instituto Federal do Pará (IFPA)</h1>
-                                <h2 class="text-lg font-semibold">
-                                    Estágio como técnico em manutenção de informática
-                                </h2>
-                                <p class="text-gray-500">jan de 2019 - mai de 2019 · 5 meses</p>
-                            </div>
-                            <p class="text-justify">
-                                Realizei manutenção corretiva e preventiva de computadores e equipamentos de
-                                informática.
-                            </p>
+                        <p class="leading-relaxed text-justify mb-4">
+                            Especialista em soluções com automação inteligente e desenvolvimento sob medida, garantindo qualidade através de testes e validações rigorosas. Atuei também na supervisão técnica e orientação de outros desenvolvedores.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs px-3 py-1 rounded-md">Python</span>
+                            <span class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs px-3 py-1 rounded-md">Node.js</span>
+                            <span class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs px-3 py-1 rounded-md">Vue.js</span>
+                            <span class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs px-3 py-1 rounded-md">Flutter</span>
+                            <span class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs px-3 py-1 rounded-md">PostgreSQL</span>
+                            <span class="bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs px-3 py-1 rounded-md">MongoDB</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="relative pl-8 border-l-4 border-zinc-800 group">
+                    <div class="absolute w-5 h-5 bg-zinc-800 rounded-full -left-[12px] top-1 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass p-8 rounded-2xl transition-all hover:bg-zinc-800/40 opacity-100 hover:opacity-95">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold uppercase">Ashita Software</h3>
+                                <p class="text-zinc-400 font-medium">Programador Fullstack Junior (Freelancer)</p>
+                            </div>
+                            <span class="font-mono text-sm mt-2 md:mt-0">Jun, 2024 — Out, 2024</span>
+                        </div>
+                        <p class="leading-relaxed text-justify">
+                            Especializado em Vuejs, Javascript, Nodejs, Express e MongoDB.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-4 border-zinc-800 group">
+                    <div class="absolute w-5 h-5 bg-zinc-800 rounded-full -left-[12px] top-1 group-hover:scale-125 transition-transform"></div>
+                    <div class="glass p-8 rounded-2xl transition-all hover:bg-zinc-800/40 opacity-100 hover:opacity-95">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-zinc-300 uppercase">Robotax</h3>
+                                 <div class="space-y-1 mt-1">
+                                    <p class="text-zinc-400">Programador FullStack Junior (Freelancer)<span class="text-zinc-500 font-normal text-sm">(Jun 2024 — Jan 2025)</span></p>
+                                    <p class="text-zinc-400">Estagiário <span class="text-zinc-500 font-normal text-sm">(Jan 2024 — Jun 2024)</span></p>
+                                </div>
+                            </div>
+                            <span class="font-mono text-sm mt-2 md:mt-0">Jan, 2024 — Fev, 2025</span>
+                        </div>
+                        <p class="leading-relaxed text-justify">
+                            Desenvolvimento de novas funcionalidades e manutenção de inteligência artificial para previsões tributárias. Tecnologias: React.js, TypeScript, Node.js, NestJS, PostgreSQL e MongoDB.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
-</body>
 
+    <footer class="py-8 border-t border-zinc-900 text-center text-gray-300 text-sm">
+        <p>&copy; 2026 Davi Costa Barroso</p>
+    </footer>
+</body>
 </html>
