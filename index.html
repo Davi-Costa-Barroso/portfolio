@@ -29,6 +29,41 @@
             pointer-events: auto;
             transform: translateY(0);
         }
+
+        /* Piscar do cursor */
+        @keyframes cursor {
+            50% { border-color: transparent; }
+        }
+
+        /* Abre a largura, segura, fecha TOTALMENTE */
+        @keyframes typing {
+            0%, 5%, 100% { width: 0; }           /* Totalmente fechado */
+            25%, 45% { width: 14ch; }          /* Abre Programador */
+            52%, 68% { width: 0; }               /* FECHA TUDO (Aumentado o intervalo em zero) */
+            82%, 95% { width: 12ch; }          /* Abre Engenheiro */
+        }
+
+        @keyframes wordChange {
+            0%, 59% { content: "Programador"; }
+            60%, 100% { content: "Engenheiro"; }
+        }
+
+        .typewriter {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 1px solid #3b82f6;
+            vertical-align: bottom;
+            /* Ajuste de animação: o tempo de 'fechado' foi levemente aumentado */
+            animation: 
+                typing 8s infinite cubic-bezier(0.45, 0, 0.55, 1), 
+                cursor 0.8s step-end infinite;
+        }
+
+        .typewriter::before {
+            content: "Programador";
+            animation: wordChange 8s infinite;
+        }
     </style>
 </head>
 
@@ -76,7 +111,7 @@
             
             <div class="flex flex-col gap-6 text-center md:text-left max-w-xl">
                 <div>
-                    <span class="text-blue-500 font-mono tracking-widest uppercase">Programador</span>
+                    <span class="typewriter text-blue-500 font-mono tracking-widest uppercase pr-1"></span>
                     <h1 class="text-5xl md:text-7xl font-bold text-white">Davi <span class="text-blue-600">Barroso</span></h1>
                 </div>
                 <p class="text-lg text-gray-200 leading-relaxed italic">
